@@ -22,3 +22,7 @@ awk '{gsub("text1", "text2"); print $0 } file_name
 awk '{print $2, length($2)}' file_name
 awk '{if ($NF>5000) $7="HIGH"; else $7=="LOW"; print$0}' file_name
 awk {sum+=$NF} END{"sume of X:" sum} file_name
+
+
+awk '/^appEnv/ {found=1; next} found {print $0}' file_name
+awk '/^appEnv/ {found=1; next} found {print $0}' file_name
